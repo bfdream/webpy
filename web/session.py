@@ -236,7 +236,7 @@ class DiskStore(Store):
 
     def _get_path(self, key):
         if os.path.sep in key: 
-            raise ValueError, "Bad key: %s" % repr(key)
+            raise ValueError("Bad key: %s" % repr(key))
         return os.path.join(self.root, key)
     
     def __contains__(self, key):
@@ -249,7 +249,7 @@ class DiskStore(Store):
             pickled = open(path).read()
             return self.decode(pickled)
         else:
-            raise KeyError, key
+            raise KeyError(key)
 
     def __setitem__(self, key, value):
         path = self._get_path(key)

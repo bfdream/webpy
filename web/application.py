@@ -281,7 +281,7 @@ class application:
                     result = peep(result)
                 else:
                     result = [result]
-            except web.HTTPError, e:
+            except web.HTTPError as e:
                 result = [e.data]
 
             result = web.safestr(iter(result))

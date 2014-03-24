@@ -268,7 +268,7 @@ def header(hdr, value, unique=False):
     hdr, value = safestr(hdr), safestr(value)
     # protection against HTTP response splitting attack
     if '\n' in hdr or '\r' in hdr or '\n' in value or '\r' in value:
-        raise ValueError, 'invalid characters in header'
+        raise ValueError('invalid characters in header')
         
     if unique is True:
         for h, v in ctx.headers:
