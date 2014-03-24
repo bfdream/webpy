@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 """web.py: makes web apps (http://webpy.org)"""
 
-from __future__ import generators
-
 __version__ = "0.37"
 __author__ = [
     "Aaron Swartz <me@aaronsw.com>",
