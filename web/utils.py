@@ -44,10 +44,7 @@ try: set
 except NameError:
     from sets import Set as set
     
-try:
-    from threading import local as threadlocal
-except ImportError:
-    from python23 import threadlocal
+from threading import local as threadlocal
 
 class Storage(dict):
     """
